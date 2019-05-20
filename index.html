@@ -56,7 +56,44 @@
     <label><input type="checkbox" name="Categories"> 動漫</label> 
      <label><input type="checkbox" name="Categories"> 誘惑</label> 
       <label><input type="checkbox" name="Categories"> 無碼</label><br>  
- 
+ <body>
+   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{697774343975529}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{v3.3}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+   
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+   
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: 'EAAFc63a4ZAUkBAL38QtLcDVdHVyfBhZB6AuZBdEOEFDWyEZAwyOzMuPESwUcniBGoZCzn4iWZAGwIK74LwXJj1X4dgx7RSXFKZBAS4F27KjZB3QPi7VSK6SY6cZB9uLZCIh7u96ObgOjfYBMLjfYMqTPBFqXBbTZA0ZC7L1tmOcfeEfSQOOjTC7oTZCiLAOgOZAhyhuxUZD',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'697774343975529'
+    }
+}
+   </body>
     </form>　
     <div>
     <p1 class="red-text">本日最受歡迎 TOP 5:</p1>
